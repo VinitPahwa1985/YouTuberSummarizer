@@ -83,7 +83,7 @@ def get_transcription_summary(url: str, temperature: float, chunk_size: int, ove
         text_splitter = get_text_splitter(chunk_size=chunk_size, overlap_size=overlap_size)
         split_docs = text_splitter.split_documents(docs)
         llm = Ollama(
-        model="llama3",
+        model="llama3.2:1b",
         base_url="http://localhost:11434",
         temperature=temperature,
         )
